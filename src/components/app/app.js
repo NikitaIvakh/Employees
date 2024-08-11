@@ -7,10 +7,16 @@ import './app.css'
 
 function App() {
 	const data = [
-		{ name: 'John', surname: 'Smith', salary: 1000, increase: false },
-		{ name: 'Antony', surname: 'Martial', salary: 800, increase: true },
-		{ name: 'Alex', surname: 'Jovanivich', salary: 700, increase: false },
-		{ name: 'Bob', surname: 'Boxen', salary: 1900, increase: false },
+		{ id: 1, name: 'John', surname: 'Smith', salary: 1000, increase: false },
+		{ id: 2, name: 'Antony', surname: 'Martial', salary: 800, increase: true },
+		{
+			id: 3,
+			name: 'Alex',
+			surname: 'Jovanivich',
+			salary: 700,
+			increase: false,
+		},
+		{ id: 4, name: 'Bob', surname: 'Boxen', salary: 1900, increase: false },
 	]
 
 	return (
