@@ -18,11 +18,20 @@ class EmployeersAddForm extends Component {
 
 	onSubmit = event => {
 		event.preventDefault()
-		this.props.onCreate(this.state.name, this.state.salary)
-		this.setState({
-			name: '',
-			salary: '',
-		})
+
+		const minLength = 2
+		if (
+			this.state.name !== '' &&
+			this.state.salary !== '' &&
+			this.state.name.length > minLength &&
+			this.state.salary.length > minLength
+		) {
+			this.props.onCreate(this.state.name, this.state.salary)
+			this.setState({
+				name: '',
+				salary: '',
+			})
+		}
 	}
 
 	render() {
