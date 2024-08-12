@@ -31,6 +31,19 @@ class App extends Component {
 		}))
 	}
 
+	createItem = (name, salary) => {
+		const newItem = {
+			id: uuidv7(),
+			name: name,
+			salary: salary,
+			increase: false,
+		}
+
+		this.setState(({ data }) => ({
+			data: [...data, newItem],
+		}))
+	}
+
 	render() {
 		const { data } = this.state
 		return (
@@ -43,7 +56,7 @@ class App extends Component {
 				</div>
 
 				<EmployeersList data={data} onDelete={this.deleteItem} />
-				<EmployeersAddForm />
+				<EmployeersAddForm onCreate={this.createItem} />
 			</div>
 		)
 	}
