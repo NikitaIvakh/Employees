@@ -23,7 +23,7 @@ class EmployeesListItem extends Component {
 	}
 
 	render() {
-		const { name, surname, salary } = this.props
+		const { name, salary } = this.props
 		const { increase, rise } = this.state
 
 		let classNames = 'list-group-item d-flex justify-content-between'
@@ -33,7 +33,7 @@ class EmployeesListItem extends Component {
 		return (
 			<li className={classNames}>
 				<span className='list-group-item-label' onClick={this.btnRise}>
-					{name} {surname}
+					{name}
 				</span>
 				<input
 					type='text'
