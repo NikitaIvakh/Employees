@@ -1,7 +1,7 @@
 import EmployeesListItem from '../employeers-list-item/employeers-list-item'
 import './employeers-list.css'
 
-function EmployeersList({ data, onDelete, onToggleProp }) {
+function EmployeersList({ data, onDelete, onToggleProp, onChangeSalary }) {
 	const elements = data.map(item => {
 		const { id, ...itemProps } = item
 		return (
@@ -10,6 +10,12 @@ function EmployeersList({ data, onDelete, onToggleProp }) {
 				onToggleProp={event =>
 					onToggleProp(id, event.currentTarget.getAttribute('data-toggle'))
 				}
+				onChangeSalary={event => {
+					const digitsArray = event.target.value.match(/\d/g)
+					const digitsString = digitsArray ? digitsArray.join('') : ''
+
+					return onChangeSalary(id, digitsString)
+				}}
 				key={id}
 				{...itemProps}
 			/>
