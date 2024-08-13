@@ -1,5 +1,5 @@
 import EmployeesListItem from '../employeers-list-item/employeers-list-item'
-import './employeers-list.css'
+import './employeers-list.scss'
 
 function EmployeersList({ data, onDelete, onToggleProp, onChangeSalary }) {
 	const elements = data.map(item => {

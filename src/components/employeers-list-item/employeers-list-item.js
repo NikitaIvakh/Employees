@@ -1,4 +1,4 @@
-import './employeers-list-item.css'
+import './employeers-list-item.scss'
 
 function EmployeesListItem(props) {
 	const {
